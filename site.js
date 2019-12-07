@@ -1,19 +1,21 @@
 let code = '';
 let count = 0;
+let equivalents = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i'];
 
-function AddSign(sign){
-    code += sign;
-    document.getElementById(`result${count}`).setAttribute("src", `logo${sign}.png`);
+function addSign(sign) {
+    code += equivalents[sign-1];
     count++;
-    if(count === 3){
-        CheckResult();
+    document.getElementById(`result${count}`).setAttribute("src", `img/logo${sign}.png`);
+    if (count === 3) {
+        checkResult();
         count = 0;
         code = '';
     }
 }
 
-function CheckResult(){
-    switch(code){
+function checkResult() {
+  console.log(code);
+    switch(code) {
         case 'abc':
             alert("yeah");
             break;
@@ -22,6 +24,6 @@ function CheckResult(){
     }
 }
 
-function StartVideo(video){
+function startVideo(video) {
 
 }
