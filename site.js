@@ -4,7 +4,6 @@ let equivalents = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i'];
 
 function addSign(sign) {
     code += equivalents[sign-1];
-    console.log(code);
     count++;
     document.getElementById(`result${count}`).setAttribute("src", `img/logo${sign}.png`);
     if (count === 3) {
@@ -15,7 +14,6 @@ function addSign(sign) {
 }
 
 function checkResult() {
-  console.log(code);
     switch(code) {
         case 'aci':
             document.location.href="fleur.html";
